@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import url(./reset.css);
+html,body{height: 100%;}
+.logo a{display: block;padding: 20px 0;}
+.logo a img{width: 100%;}
+.gnb-vt{width: 160px;padding:0 10px;height: 100%;background-color: #333;}
+.gnb-vt a{display: block;color: #fff;}
+.gnb-vt li ul{display: none;} /* 서브메뉴 안보이게 함 */
+
+/*.gnb-vt .one-depth>a{padding: 10px 0;border-bottom: 1px solid #aaa;} 메뉴 밑줄 위치 수정전 */
+.gnb-vt .one-depth{border-bottom: 1px solid #555;padding-bottom: 10px;}
+.gnb-vt .one-depth>a{padding:5px 0;}
+.gnb-vt .one-depth.on>a{background-color: #E82C48;} /* 메뉴 클릭시 색상변경 */
+
+
+/* kpc 웹진 일반형 */
+.side-bar{position: fixed;left: 0;top: 0;width: 160px;padding:0 20px;height: 100%;background-color: #333;z-index: 30;}
+.gnb a{display: block;color: #fff;}
+.gnb li ul{display: none;} 
+.gnb .one-depth{border-bottom: 1px solid #555;padding:5px 0;}
+.gnb .one-depth a{padding:5px 0;}
+.gnb .one-depth.on>a{background-color:#E82C48;}
+.side-bar .footer{position: absolute;bottom: 20px;left: 20px;color: #9b9b9b;width: 160px;font-size: 12px;}
+.side-bar .footer .copyright{margin: 10px 0;}
+.container{padding-left:200px ;position: relative;z-index: 10;}
+
+
+/* keb 하나은행 PR 페이지 */
+.header{}
+.top{padding: 10px 0;height: 28px;}
+.bar{background-color: #008486;padding-top: 2px;}
+.keb-logo{float: left;}
+.keb-gnb{float: left;}
+.keb-gnb>ul>li{float: left;position: relative;}
+.keb-gnb>ul>li>a{display: block;color: #000;font-size: 16px;font-weight: bold;padding:4px 10px;}
+
+.keb-gnb>ul>li>ul{position: absolute;width: 600px;top: 40px;left: 0;display: none;display: block;}
+.keb-gnb li ul li{float: left;}
+.keb-gnb li ul li a{color: #fff;}
+
+

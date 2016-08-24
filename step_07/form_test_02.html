@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" href="./css/base/myReset.css">
+	<link rel="stylesheet" href="./css/form_test_02.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+	<link rel="apple-touch-icon" href="favicon.png">
+	<!--[if lte IE 9]>
+		<link rel="stylesheet" href="./css/ie_form_test_02.css">
+		<script src="lt_IE/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="lt_IE/PIE/PIE.js"></script>
+		<script src="lt_IE/responsive.min.js"></script>
+	<![endif]-->
+
+	<script src="./js/jquery/jquery-1.12.4.min.js"></script>
+	<script src="./js/jquery/jquery-migrate-3.0.0.min.js"></script>
+	<script src="./js/jquery/jquery-ui.min.js"></script>
+	<title>폼만들기2</title>
+	<style>
+		html,body{font-family:'Noto Sans KR',sans-serif;}
+	</style>
+	<script>
+		$(document).ready(function(){
+		});
+	</script>
+</head>
+<body>
+		<div class="container">
+			<h1>폼만들기2</h1>
+			<div id="certification">
+				<h2>본인인증 서비스</h2>
+				<div class="certifi_content">
+					<h3>휴대폰 인증</h3>
+					<p>입력하시는 정보는 암호화처리되며,<br />
+						 어떠한 비용도 발생하지 않습니다.</p>
+						 <form action="#" method="post">
+						 	<fieldset class="mobile">
+						 		<legend>휴대폰 인증 번호 입력영역</legend>
+						 		<dl>
+						 			<dt><label for="firstNum">
+						 				<span class="hidden">고객님의 </span>
+						 				휴대폰 번호
+						 				<span class="hidden">를 작성하세요</span>
+						 				</label>
+						 			</dt>
+						 			<dd>
+							 			<select name="firstNum" id="firstNum" class="num_box">
+							 				<option value="010">010</option>
+							 				<option value="011">011</option>
+							 				<option value="012">012</option>
+							 				<option value="013">013</option>
+							 				<option value="014">014</option>
+							 				<option value="016">016</option>
+							 				<option value="017">017</option>
+							 				<option value="018">018</option>
+							 				<option value="019">019</option>
+							 				<option value="0505">0505</option>
+							 			</select>
+							 			<span class="line"></span>
+						 			</dd>
+						 			<dd>
+						 				<input type="text" name="middleNum" id="middleNum" value="" class="num_box" maxlength="4">
+										<label for="middleNum" class="hidden">
+											휴대폰번호 가운데 셋 또는 네자리 번호를 입력하세요.
+										</label>
+						 				<span class="line"></span>
+						 			</dd>
+						 			<dd>
+						 				<input type="text" name="lastNum" id="lastNum" value="" class="num_box" maxlength="4">
+										<label for="lastNum" class="hidden">
+											휴대폰번호 마지막 네자리 번호를 입력하세요.
+										</label>
+						 			</dd>
+						 		</dl>
+						 		<dl>
+						 			<dt></dt>
+						 			<dd></dd>
+						 			<dd></dd>
+						 			<dd></dd>
+						 		</dl>
+						 		<label for="certify">
+						 			<input type="checkbox" name="ok" id="certify" value="certification" />
+						 			개인정보 제공 및 활용에 동의 합니다.
+						 		</label>
+
+						 	</fieldset>
+
+						 	<fieldset class="send">
+						 		<legend>인증 확인 및 취소</legend>
+						 		<input type="submit" name="done" id="done" value="확인">
+						 		<label for="done" class="hidden">위 내용에 동의하고 확인하겠습니다.</label>
+						 		<input type="reset" name="cancle" id="cancle" value="취소">
+						 		<label for="cancle" class="hidden">위 내용을 취소 하겠습니다.</label>
+						 	</fieldset>
+						 </form>
+				</div>
+			</div> <!--// #certification -->
+	</div><!--// .container -->
+</body>
+</html>

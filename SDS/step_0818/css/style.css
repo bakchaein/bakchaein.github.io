@@ -1,0 +1,63 @@
+@charset "utf-8"; /*캐릭터셋정보. 웹상에서 주석이 한글로 안보임을 처리*/
+@import url(reset.css); /*리셋*/
+/* common */
+.center-align{width: 1000px; margin: 0 auto;}
+.clearfix:after{display: block;clear: both; content: '';}
+/* layout */
+.wrap{}
+.header{position: relative; padding: 10px; border-bottom: 2px solid #3B78CE;  z-index: 30; }
+.container{ position: relative; z-index: 20; }
+.footer{}
+/* custom */
+.logo{float: left;}
+.logo a{display: block; width: 180px; height: 50px;background-image: url(../imgs/common.png); text-indent: -9999px;}
+
+/* gnb */
+.gnb{float: left; margin-left: 20px; margin-top: 10px;}
+.gnb>ul{}
+.gnb>ul>li{float: left;}
+.gnb>ul>li>a{display: block;padding: 1em 0.5em 0; color: #333; font-weight: bold;}
+
+/* 햄버거 메뉴 
+#header_list{border:1px soild #99abb5 ; padding: 7px 5px 7px 5px; position: absolute; top:10px; right: 10px; display: none;}
+#header_list span{display: block; width: 21px; height: 16px; background-image: url(../imgs/header_list.png); text-indent: -9999px; background-size: 21px 16px;}*/
+
+/* 햄버거 메뉴*/
+#header_list{border: 1px solid #99ABB5;padding: 7px 5px 7px 5px;position: absolute;top: 10px;right: 10px;display: none;}
+#header_list span{display: block;width:21px ;height: 16px;background-image: url(../imgs/header_list.png);text-indent: -9999px;background-size:21px 16px ;}
+
+/*모바일 gnb 메뉴*/
+.gnb-m{clear: both; display: none;}
+.container img{width: 100%;}
+#products{position: relative;}
+/*#products .slidesjs-navigation{display: none;}*/
+#products .slidesjs-pagination{position: absolute; left: 50%; bottom: 10px; margin-left: -55px; z-index: 100;}
+#products .slidesjs-pagination:after{display: block;clear: both;content: '';}
+#products .slidesjs-pagination li {float: left; padding: 4px;}
+#products .slidesjs-pagination li a{display:block; width: 14px; height: 14px;background-color: #ccc; border-radius: 7px; /*text-indent: -9999px;*/}
+#products .slidesjs-pagination li a.active{background-color: #048dba;}
+
+/* 미디어쿼리 */
+@media screen and (max-width:768px/*768보다 작다면 모바일*/){
+	.center-align{width: 100%;}
+	#header_list{display: block;}
+	.logo{float: none; }
+	.logo a{width: 128px;height: 32px; background-position: -200px -10px; margin: 0 auto;}
+	.gnb{display: none;}
+	.gnb-m{position: absolute; top: 54px;left: 0; background-color: #3b78ce; width: 100%;display: none;}
+	.gnb-m>ul>li{float: none;}
+	.gnb-m>ul>li>a{display: block; padding: 5px; color: #fff;}
+}
+
+@media screen and (min-width:769px/*769보다 크다면*/) {
+	.gnb-m{display: none;}
+	
+}
+/*
+css 작성 순서
+1. 캐릭터셋 정보
+2. 리셋
+2-1. 공통
+3. 레이아웃
+4. 사용자 정의
+*/

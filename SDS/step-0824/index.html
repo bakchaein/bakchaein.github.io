@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!--  <meta http-equiv="X-UA-Compatible" content="IE=edge"> UA-Compatible 브라우저호환성 edge최신으로/ 안쓰는게 좋음 / 유효성검사 통과못함 / 비표준임 -->
+  <link rel="stylesheet" href="./css/style.css"><!--내가 작성하는 css가 기본 css뒤에 있어야 적용된다 
+                                                    만약 지금처럼 앞에 둔다면 nhn-sliders처럼 구체적으로 css에 작성 -->
+  <link rel="stylesheet" href="./dist/jquery.bxslider.css"><!-- script보다 link를 먼저 볼러야 속도 빠름-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><!--아이콘 가져와서 사용하기 material icons-->
+  <script src="./dist/jquery.min.js"></script> <!-- bxslider보다 먼저 불러야한다-->
+  <script src="dist/jquery.bxslider.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="./dist/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+	<div class="wrap">
+    <div class="header">
+       <div class="inner-container clearfix">
+         <h1 class="logo"><a href="">네이버로고</a></h1>
+         <ul class="gnb clearfix">
+           <li class="one-depth"><a href="">네이버</a>
+             <ul>
+               <li><a href="">서브메뉴1-1</a></li>
+               <li><a href="">서브메뉴1-2</a></li>
+               <li><a href="">서브메뉴1-3</a></li>
+               <li><a href="">서브메뉴1-4</a></li>
+               <li><a href="">서브메뉴1-5</a></li>
+               <li><a href="">서브메뉴1-6</a></li>
+               <li><a href="">서브메뉴1-7</a></li>
+               <li><a href="">서브메뉴1-8</a></li>
+               <li><a href="">서브메뉴1-9</a></li>
+             </ul>
+           </li>
+           <li class="one-depth"><a href="">서비스</a>
+             <ul>
+               <li><a href="">서브메뉴2-1</a></li>
+               <li><a href="">서브메뉴2-2</a></li>
+               <li><a href="">서브메뉴2-3</a></li>
+             </ul>
+           </li>
+           <li class="one-depth"><a href="">홍보</a>
+             <ul>
+               <li><a href="">서브메뉴3-1</a></li>
+               <li><a href="">서브메뉴3-2</a></li>
+               <li><a href="">서브메뉴3-3</a></li>
+               <li><a href="">서브메뉴3-4</a></li>
+             </ul>
+           </li>
+           <li class="one-depth"><a href="">IR</a>
+             <ul>
+               <li><a href="">서브메뉴4-1</a></li>
+               <li><a href="">서브메뉴4-2</a></li>
+               <li><a href="">서브메뉴4-3</a></li>
+               <li><a href="">서브메뉴4-4</a></li>
+               <li><a href="">서브메뉴4-5</a></li>
+               <li><a href="">서브메뉴4-6</a></li>
+               <li><a href="">서브메뉴4-7</a></li>
+               <li><a href="">서브메뉴4-8</a></li>
+               <li><a href="">서브메뉴4-9</a></li>
+             </ul>
+           </li>
+           <li class="one-depth"><a href="">채용</a></li>
+         </ul>
+       </div>
+      
+      <!--
+      .inner-container>h1.logo>a>{네이버로고}^^ul.gnb>li.one-depth*5>a-->
+    </div>
+    <div class="container">
+   <div class="nhn-slides">
+      <div id="mainSlides">
+        <li class="item item1"></li>
+        <li class="item item2"></li>
+        <li class="item item3"></li>
+      </div>
+     <!-- div#myPager>a[data-slide-index="x"]*3-->
+     <!-- 페이지네이션 따로 만들어서 위치 바꾸기-->
+      <div id="myPager" class="hide">
+      	<a href="" data-slide-index="0">0</a>
+      	<a href="" data-slide-index="1">1</a>
+      	<a href="" data-slide-index="2">2</a>
+      </div>
+    </div>
+       <div class="inner-container clearfix">
+       <div class="news">네이버 뉴스</div>
+       <div class="news-contents">
+         <ul class="news-text">
+           <li><a href="">네이버, 창작자와 스몰비즈니즈가 오프라인에서 새로운 방식으로 대중을 만날 수 있는 다양한 프로그램 마련</a></li>
+           <li><a href="">'네이버뉴스 편집자문위원회' 제3기 발족</a></li>
+           <li><a href="">네이버 D2SF, 테크 스타트업 'widevantage(와이드벤티지)' 신규 투자</a></li>
+           <li><a href="">네이버, 총 133개국에 출시된 게임 ‘마음의 소리’ 글로벌 버전에 '네이버 카페 SDK' 적용</a></li>
+           <li><a href="">네이버 그라폴리오, 서울와우북페스티벌과 함께 창작 그림책 챌린지 개최</a></li>
+         </ul> 
+       </div> 
+         <div class="my-controls">
+           <span id="nhn-prev"></span>
+           <span id="nhn-next"></span>
+       </div>
+      </div> 
+  </div>
+    <div class="footer"></div>
+   </div>
+<script src="./js/nhn-gnb.js"></script>
+  <script>
+  $(function(){
+    $('#mainSlides').bxSlider({  /* .bx-c를 슬라이드하라*/
+			mode:'fade',/*페이지 넘어가는 효과*/
+      controls:false, /* 이전다음버튼 없애기 */
+      auto:true, /* 자동으로 페이지 넘기기 */
+			speed:700 /* 페이지넘어가는 속도 기본은 500*/
+//		 pagerCustom:'#myPager' /*사용자정의 페이지네이션 사용시 css참고*/
+    });
+    $('.news-text').bxSlider({ 
+      pager:false,
+      nextSelector:'#nhn-next',
+      prevSelector:'#nhn-prev',
+        speed:1,
+      auto:true,
+     pause:3000 /* 슬라이드 아래 메뉴들 */
+    });
+    $('#nhn-prev a').html('<i class="material-icons">navigate_before</i>')
+    $('#nhn-next a').html('<i class="material-icons">navigate_next</i>')
+    
+  })  /* html을 통해서 텍스트를 아이콘으로 변경*/
+ 
+
+  </script>
+
+</body>
+</html>

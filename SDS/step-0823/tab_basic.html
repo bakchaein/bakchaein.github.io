@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>수평형메뉴</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="src/jquery.min.js"></script>
+<!--cc:ie + tab -->
+	
+	<!--[if IE IE 9]>
+	<script src="./src/html5shiv.min.js"></script>
+	<![endif]-->
+	
+	<!-- 조건 분기↑ i8에서도 보여지게 하기위한 세팅 -->
+</head>
+<body>
+<div class="tab-container">
+<!--nav>ul>li*5>a{메뉴 $}-->
+<nav>
+	<ul>
+		<li class="on"><a href="">메뉴 1</a></li>
+		<li><a href="">메뉴 2</a></li>
+		<li><a href="">메뉴 3</a></li>
+		<li><a href="">메뉴 4</a></li>
+		<li class="last"><a href="">메뉴 5</a></li>
+	</ul>
+</nav>
+<!--div.contents>div.item*5-->
+<div class="tab-contents">
+    <div class="item item1 on">아이템 1의 내용</div>
+    <div class="item item2">아이템 2의 내용</div>
+    <div class="item item3">아이템 3의 내용</div>
+    <div class="item item4">아이템 4의 내용</div>
+    <div class="item item5">아이템 5의 내용</div>
+</div>
+</div>
+<script>
+	 $(function(){
+    $('nav a').mouseover(function(){
+			 var n=$('nav a').index($(this)); /*메뉴 오버시 밑에 내용인덱스를 나오게 하는거*/
+   $(this).parent().addClass('on').siblings().removeClass('on');
+/*this는 a이고  li에게 오버를 줘야함 siblings().removeClass('on') 다른메뉴 클릭시 on효과 빼기*/
+		  $('.tab-contents .item').eq(n).show().siblings().hide(); /*선택한 메뉴의 인덱스는 보이고 다른메뉴의 인덱스는 빼기*/
+    })
+  })
+
+	
+	</script>
+</body>
+</html>

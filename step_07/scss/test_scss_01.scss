@@ -1,0 +1,27 @@
+// @import "_test_base.scss";
+/*scss 주석 */
+// 단, //는 css로 변환 x  
+
+
+//h1{background-color: $primary; color: $primary_font;}
+//#headBox{background-colo//r: $primary;}
+//#headBox h1{background-color: $primary; color: $primary_font;}
+//#headBox ul>li{border-bottom:  $font_line;}
+
+#headBox{background-color: $primary;
+h1{background-color: $primary; color: $primary_font;}
+ul{width: 100%; height: auto;
+	>li{border-bottom: $font_line;
+	 >a{color:$white;
+	  &:hover{color:darken($white, 70%);} 
+	}//a
+	  	                                             //&는 자기자신이다. 즉 a를 뜻함
+	}// li
+	 &:nth-child(2){color:darken($white, 70%);} 
+  }// ul
+                                                      //&는 자기자신이다. 즉 ul를 뜻함. 바로 밑. 닫는파일 
+}// #headBox
+
+#article a{color: lighten($primary_font,40%);}
+#footer a{color: $primary_font;}
+.tagbox a{color: $primary_font;}

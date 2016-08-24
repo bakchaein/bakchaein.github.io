@@ -1,0 +1,18 @@
+@charset "uft-8";
+@import url(reset.css);
+.inner-container{width: 1140px; margin: 0 auto;}
+
+
+.wrap{}
+.header{padding: 0.5em; background-color: #fbfbfb; border-bottom: 1px solid #dfdfdf;}
+.container{margin-top: 15px;}
+.footer{background-color: #aaa; color: #fff; padding: 1em 0;}
+
+
+/*#jaws_slides .slidesjs-navigation{display: none;} 이전다음 안보이게하기*/
+.slides-wrap{width: 790px;}
+#jaws_slides .slidesjs-pagination:after{display: block;clear: both;content: '';}
+#jaws_slides .slidesjs-pagination li{float: left;width: 25%;}
+
+#jaws_slides .slidesjs-pagination li a{display: block;padding: 0.75em;font-size: 13px;color: #000;}
+#jaws_slides .slidesjs-pagination li a.active{font: bold;}

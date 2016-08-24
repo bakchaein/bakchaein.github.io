@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>transform</title>
+    <link rel="stylesheet" href="css/base/myReset.css"/>
+    <style>
+        h1{width: 100%;text-align:center; font-size: 2.5rem; margin-bottom: 1rem;padding-top: 0.5rem; padding-bottom: o.5px; border-bottom: 1px solid #777;}
+        ul{width: 780px;height: 100px;margin: 0 auto; border: 3px solid #ccc; perspective:500px ;}
+        ul li{width: 80px; height: 80px;float: left; margin: 0.5rem; text-align: center; line-height: 80px; background-color: #7af; font-weight: bold; color: #fff; transition: transform 0.5s;}
+    
+       /*transition:transform 0.5s 랑 :hover 를 써서 마우스 올렸을때 효과로 바꿈*/
+        
+        ul> li:nth-child(1):hover{transform: rotate(45deg); background-color: #faa;}
+                              /*각도=deg* -값입력하면 반대로. 720을 입력하면 뱅글뱅글 돌아요ㅋ */
+        ul> li:nth-child(2){transform:skewY(-45deg);} /*글씨도 같이 회전하기때문에 글씨 따로 설정*/
+        ul> li:nth-child(2)>span{transform:skewY(45deg); display: block;}
+        ul> li:nth-child(3):hover{transform: scale(1.2);}
+        ul:hover > li:nth-child(4){transform:translate(500px,100px); background-color: #f0f;}
+                      /* 포지션 릴레이티비랑 비슷. hover를 뒤에두면 불안정하게 움직여서 앞으로 뺌*/
+        ul:hover > li:nth-child(5){transform-origin:right top; transform:rotate(45deg);}/*기준잡는 기능*/
+        ul> li:nth-child(6):hover{transform:rotateY(45deg);}
+                       /* ul에 작성:perspective:1000px, 원근법 수치가 작으면 나한테 가까이*/
+         ul:hover > li:nth-child(7){transform:rotate(-180deg) translateY(50px);}
+         ul:hover > li:nth-child(8){transform: translateY(150px)rotate(-180deg);}
+        
+        .transition{width: 850px; height: 6.25rem; margin:10rem auto; border: 1px solid #888;}
+        .transition>ol{width:inherit; height: inherit;}
+        .transition li{width:5rem; height: 5rem; background-color: #d77;color: #fff;text-align: center; padding-top: 1rem;float: left; margin: 0.5rem 1.5rem; box-sizing: border-box;}
+        .transition:hover li{transform: translateY(-10rem); background-color: #6cf;}
+        .transition li:nth-child(1){transition-duration:0.5s; transition-property: background;}
+        /*property : 원하는값만 바뀌게 하겠다. 여기선 백그라운드칼라만 0.5초*/
+        .transition li:nth-child(2){transition-duration: 2s;}
+        .transition li:nth-child(3){transition-timing-function:linear; transition-duration: 2s;}
+        /* linear, ease, ease-in, ease-out, ease-in-out 어떠한움직임을 점점빨라지게 느리게*/
+        .transition li:nth-child(4){transition-delay: 1s;} /*일정시간 있다가 움직임*/
+        .transition li:nth-child(5){transition:all 0.7s ease-in 2s; }
+    /*transition:속성 시간 속도감 지연시간; 속성 시간은 꼭 써야함*/
+    
+    
+    </style>
+    <script></script>
+</head>
+<body>
+    <h1>transform</h1> <!--속성명-->
+    <ul>
+        <li>rotate</li>
+        <li><span>skew</span></li>
+        <li>scale</li>
+        <li>translate</li> <!--이동하는 속성값-->
+        <li>origin</li>
+        <li>rotateY</li>
+        <li>multi1</li>
+        <li>multi2</li>
+    </ul>
+    
+    <div class="transition"> <!--움직임을 처리하는 속성명-->
+    <h2>transition</h2>
+    <ol>
+        <li>property</li> <!-- 속성 -->
+        <li>duration</li> <!-- 시간 -->
+        <li>timing-function</li> <!-- 속도감-->
+        <li>delay</li> <!--지연시간-->
+        <li>all</li> <!-- 위에 4가지 한번에-->
+    </ol>
+    </div>
+</body>
+</html>

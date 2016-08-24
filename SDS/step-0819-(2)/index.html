@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+  <script src="dist/jquery-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+<? include('header.html') ?>
+	<!--<div class="header">
+	 <h1><a href="index.html">아줌마 떡</a></h1>
+	</div>-->
+		<div class="container inner-container">
+		
+<!-- div.gnb>ul>li*3>a[href="page$.html"]>{페이지$} -->
+			<div class="gnb">
+				<ul>
+					<li><a href="page1.html">페이지1</a></li>
+					<li><a href="page2.html">페이지2</a></li>
+					<li><a href="page3.html">페이지3</a></li>
+				</ul>
+			</div>
+		
+	<div class="dummy inner-container">평화스러운 보는 튼튼하며, 황금시대를 것이다. 얼음 불어 트고, 있으랴? 대고, 피에 봄날의 황금시대를 싶이 용기가 청춘은 것이다. 일월과 고행을 그들은 인간에 것이다. 수 군영과 그들에게 따뜻한 때에, 싶이 청춘을 교향악이다. 온갖 있는 얼음과 하는 가치를 그들의 군영과 이것이다. 청춘을 얼음에 같이 것이다. 있는 웅대한 트고, 별과 피고, 심장의 같으며, 속에 봄바람이다. 시들어 봄날의 되려니와, 얼음이 끓는 위하여, 피가 황금시대다. 품에 청춘이 사라지지 교향악이다. 목숨이 스며들어 보이는 투명하되 봄바람을 것이다. 청춘에서만 고동을 같이, 무한한 피가 구할 봄바람이다.
+</div>
+</div>
+
+<? include('footer.html') ?>
+<!--<div class="footer">
+<div class="inner-container">copyright&copy; 2016 myCompany, All rights reserved.</div>
+	
+</div>-->
+</div>
+  <script>
+   $(function(){
+      $('#jaws_slides').slidesjs({
+        width:789,
+        height:400,
+        navigation:{
+          effect:'fade'
+        },
+        pagination:{
+          effect:'fade'
+        }
+      });
+      
+      $('.slidesjs-pagination a').eq(0).text('치즈가 쭉~ 치즈떡볶기 출시');
+      $('.slidesjs-pagination a').eq(1).html('탱글한 어묵~ 바삭한 새우 <br> 새우튀김우동 출시');
+      $('.slidesjs-pagination a').eq(2).html('콕! 찍어먹는 재미가 있는 <br> 매운떡볶이')
+      $('.slidesjs-pagination a').eq(3).text('바사삭 몽땅! 모둠튀김')
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* css reset */
+ul,li{margin: 0; padding: 0;}
+img{border: 0 none;}
+ul{list-style: none;}
+/* gnb */
+.gnb ul{background-color: #0275f4; min-width: 320px;}
+.gnb ul:after{display: block; clear: both; content: '';}
+.gnb ul li{float: left; width: 12.5%;}
+.gnb ul a{display: block; padding: 0.4rem 0; color: #fff; text-decoration: none; text-align: center;white-space: nowrap; letter-spacing: -1px; font-size: 14px; font-weight: bold;}
+.gnb ul li.on a{border-bottom: 3px solid #fff;}
+
+/* gmSlides */
+/*.gm_slides{position: relative;}*/
+.slidesjs-pagination{display: none;}
+.slidesjs-container{position: relative;  width: 615px; height: 327px;}
+a.slidesjs-previous,a.slidesjs-next{position: absolute;top: 150px; display: block; width: 64px;height: 72px;background-image: url(../imgs/main.png); text-indent: -9999px; z-index: 1000;}
+a.slidesjs-previous{background-position: -210px -80px ; left: 10px;} 
+a.slidesjs-next{background-position: -280px  -80px ;right: 10px;}
+/* bnr */
+.bnr ul:after{display: block; clear: both; content: '';}
+.bnr li{float: left; width: 20%; padding: 5px;box-sizing: border-box;}
+.bnr li img{width: 100%;}
+

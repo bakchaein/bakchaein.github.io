@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+/* naver Corp*/
+#mainSlides .item{height: 402px;}
+#mainSlides .item1{background:url(../imgs/img_main_spot6.jpg) center 0 no-repeat;}
+.header .inner-container{width: 960px;margin:0 auto;padding: 30px 0 20px 0;}
+.logo{float: left;margin-right: 20px;} /* html에 clearfix */
+.logo a{display: block;width:107px ;height:20px ;background-image: url(../imgs/spr2.png);text-indent: -9999px;}
+.gnb{float: left;position: relative;} /* html에 clearfix */
+.one-depth{float: left;} /* html에 clearfix */
+.one-depth>a{display: block;/*width: 80px;*/color: #000;font-size: 16px;text-align: center;font-weight: bold; padding: 0 14px 14px 14px; /*padding-bottom: 14px;*/}
+.one-depth ul{display: none;position: absolute;top: 30px;left: 0;width: 360px;background-color: #fff;border: 1px solid #afafaf;border-top: 2px solid #2DB400;padding: 1em;box-sizing: border-box}
+.one-depth.on>a{color: #2DB400}
+.one-depth ul li{float: left;width: 110px;}
+.one-depth ul li a{color: #333;font-size: 12px;padding: 5px 0;}
+.one-depth ul li a:hover{color: #2DB400}
+/* ---------------- */
+
+body{} 
+/*body{margin: 20px;} 네이버짤때 비활성화*/
+nav>ul{list-style: none;}
+nav>ul:after{display: block;clear: both;content: '';}
+nav>ul>li{float: left; width: 20%;/* .tab-container{width: 500px;} 에서 메뉴사이즈를 맞춰서 5등분*/}
+nav>ul>li>a{display: block;padding: 0.5em 0.75em;color: #333;text-decoration: none;border: 1px solid #cacdd4;border-right-width: 0;background-color: #f9f9f9;text-align: center;}
+nav>ul>li.on>a{background-color: #4F83EE;color: #fff;} /*border-right-width: 0 보더가 겹치니깐 한쪽만 주기 */
+nav>ul>li.last>a{border-right-width: 1px;} /* 메뉴 맨끝에 보더 한줄 주기위해서 html에 클래스라스트를 주고 , nth같은걸로 줘도 되지만 i8인식못함 */
+
+.tab-container{width: 500px;}
+.tab-contents .item{display: none;height: 200px;font-size: 50px;}
+.tab-contents .item1{background-color: #2196F3;}
+.tab-contents .item2{background-color: #BBDEFB}
+.tab-contents .item3{background-color: #64B5F6}
+.tab-contents .item4{background-color: #80DEEA}
+.tab-contents .item5{background-color: #ff0;}
+.tab-contents .item.on{display: block;}

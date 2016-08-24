@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="src/jquery.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="top clearfix">
+        <h1 class="keb-logo"><a href=""><img src="imgs/h1_logo_kebhana.png" alt=""></a></h1>
+        <div class="keb-gnb">
+          <ul class="clearfix">
+            <li><a href="#">은행개요</a>
+              <ul>
+                <li><a href="">연혁 및 조직</a></li>
+                <li><a href="">CEO Room</a></li>
+                <li><a href="">KEB HANA CI</a></li>
+                <li><a href="">투자자정보</a></li>
+                <li><a href="">하나금융그룹</a></li>
+              </ul>
+            </li>
+            <li><a href="#">기업이념</a></li>
+            <li><a href="#">윤리경영</a></li>
+            <li><a href="#">홍보센터</a></li>
+            <li><a href="#">인재/채용</a></li>
+            <li><a href="#">사회공헌</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bar"></div>
+    </div>
+    <div class="container">
+      <img src="imgs/visual_kor01.png" alt="">
+    </div>
+    <div class="footer"></div>
+  </div>
+    <script>
+  $(function(){
+    $('.keb-gnb>ul>li>a').mouseover(function(){
+        $('.bar').height(24);
+    })
+ /* 마우스를 올려놨을때 초록색 바가 두껍게 변하기 */ 
+    
+		  $('.keb-gnb>ul').mouseleave(function(){
+      $('.bar').height(0);
+      $('..keb-gnb>ul>li>ul').hide();
+    })
+
+		/* 마우스 나갔을때 돌아가기 */
+  })
+  </script>
+
+</body>
+</html>

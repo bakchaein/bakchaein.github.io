@@ -1,0 +1,27 @@
+ ul,li{margin: 0; padding: 0;}
+.container{width: 700px; background-color:#faf9f9 ; margin: 0 auto; position: relative;}
+.header{width: 700px;height: 126px; margin: 0 auto; background-color: #fff; border-bottom: 1px solid #dcdcdc; position: relative;}
+h1{width: 330px; height: 60px;margin-top: 30px; margin-left: 40px; background-color: #ff9;display: block; width: 330px; height: 60px; background-image: url(../imgs/sp_login.png); text-indent:-9999px;
+        background-repeat: no-repeat;  position: absolute;}
+#calendar{width: 625px; margin: 0 auto;}
+.slides_container {width: 625px; height: 471px;}
+.slides_container div.item{width: 625px; height: 471px;}
+a.prev,a.next{position: absolute; top: 290px; display: block; width: 23px; height: 43px; 
+	            background-image: url(../imgs/sp_caledar.png);text-indent: -9999px;}
+/* IR (imate replacement) --> d:b, w h , bgi, ti:- 
+   IS (image sprite} --> IR + bgp */
+a.prev{left:10px; background-position: -110px -50px;}
+a.next{right:10px; background-position: -140px -50px;}
+
+.pagination { width: 75px; margin:0 auto; list-style: none;}
+.pagination:after{display: block; clear: both; content: ""}
+.pagination li{float: left;}
+.pagination li a{display: block; width: 15px; height: 15px; background-image: url(../imgs/sp_caledar.png); text-indent: -9999px; background-position: -39px -48px;}
+.pagination li.current a{background-position: -19px -48px;}
+.footer{width: 700px; height: 136px; margin: 0 auto; position: relative;}
+.footer>ul{width: 700px;height: 110px; margin-top: 12px;position: absolute;}
+.footer>ul>li{width: 230px;height: 110px;float: left; display: blocks; background-image: url(../imgs/sp_login.png);text-indent: -9999px;}
+.app_01{background-position: 0 -100px;}
+.app_02{background-position: 0 -220px;}
+.app_03{background-position: 0 -340px;}
+
